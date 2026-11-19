@@ -1,0 +1,247 @@
+@import "tailwindcss";
+@theme {
+  --color-orange: #f58216;
+  --color-navy: #182638;
+}
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #182638;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+.container-shell {
+  width: min(100% - 2.5rem, 1200px);
+  margin-inline: auto;
+}
+.section-pad {
+  padding-block: 5rem;
+}
+.nav-link {
+  position: relative;
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #ff951f;
+}
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  height: 2px;
+  background: #f58216;
+}
+.btn-primary,
+.btn-outline,
+.btn-outline-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 10px;
+  padding: 0.9rem 1.25rem;
+  font-size: 13px;
+  font-weight: 800;
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+}
+.btn-primary {
+  background: #f58216;
+  color: white;
+  box-shadow: 0 8px 20px rgba(245, 130, 22, 0.2);
+}
+.btn-primary:hover {
+  background: #e66d08;
+  transform: translateY(-2px);
+}
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  color: white;
+}
+.btn-outline:hover {
+  border-color: #f58216;
+  color: #ff9b32;
+}
+.btn-outline-orange {
+  border: 1px solid #f58216;
+  color: #e66d08;
+}
+.btn-outline-orange:hover {
+  background: #f58216;
+  color: white;
+}
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 0.75rem 1.25rem 1.25rem;
+  background: #101e2e;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mobile-menu > a:not(.btn-primary) {
+  padding: 0.8rem 0.25rem;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+.mobile-menu > a:not(.btn-primary):hover {
+  color: #f58216;
+}
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.section-heading span {
+  height: 1px;
+  width: clamp(24px, 8vw, 85px);
+  background: #f58216;
+}
+.section-heading h2 {
+  color: #182638;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.bg-navy .section-heading h2 {
+  color: white;
+}
+.bg-navy .section-heading span {
+  background: #f58216;
+}
+.product-card {
+  overflow: hidden;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(16, 30, 46, 0.08);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(16, 30, 46, 0.14);
+}
+.brand-word {
+  text-align: center;
+  font-size: clamp(0.75rem, 1.3vw, 1.05rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: #34445a;
+  letter-spacing: -0.04em;
+}
+.brand-0 {
+  color: #e52b31;
+  font-style: italic;
+  font-size: 1.35rem;
+}
+.brand-1 {
+  color: #2671b9;
+}
+.brand-2 {
+  color: #d92b2b;
+  font-size: 1.2rem;
+}
+.brand-3 {
+  color: #154c9c;
+  font-size: 1.35rem;
+  font-style: italic;
+}
+.brand-4 {
+  color: #bd2932;
+}
+.brand-5 {
+  color: #079b79;
+}
+.brand-6 {
+  color: #e27b17;
+}
+.brand-7 {
+  color: #1d4e89;
+  font-style: italic;
+}
+.social-link {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  color: rgb(244, 120, 120);
+  transition: all 0.2s;
+}
+.social-link:hover {
+  border-color: #f58216;
+  color: #f58216;
+}
+.form-label {
+  display: block;
+  margin-top: 1.2rem;
+  color: #253448;
+  font-size: 12px;
+  font-weight: 800;
+}
+.form-label span {
+  color: #f58216;
+}
+.form-label input,
+.form-label textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  border: 1px solid #dce2e8;
+  border-radius: 8px;
+  padding: 0.8rem 0.9rem;
+  color: #182638;
+  outline: none;
+  font-size: 13px;
+  transition:
+    border 0.2s,
+    box-shadow 0.2s;
+}
+.form-label input:focus,
+.form-label textarea:focus {
+  border-color: #f58216;
+  box-shadow: 0 0 0 3px rgba(245, 130, 22, 0.12);
+}
+.form-label textarea {
+  resize: vertical;
+}
+@media (max-width: 640px) {
+  .container-shell {
+    width: min(100% - 2rem, 1200px);
+  }
+  .section-pad {
+    padding-block: 3.5rem;
+  }
+  .hero {
+    min-height: 640px;
+  }
+  .brand-word {
+    font-size: 0.8rem;
+  }
+}
